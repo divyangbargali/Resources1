@@ -1,0 +1,8 @@
+// how to pass parameter through navigation.
+
+function CategoriesScreen({navigation}){
+	function renderCategoryItem(itemData){
+		function pressHandler(){
+			navigation.navigate('MealsOverview',{
+				categoryId: itemData.item.id,});
+}

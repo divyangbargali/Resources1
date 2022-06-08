@@ -1,0 +1,11 @@
+//navigation ke through pass data ko extract kaise kare.
+
+function MealsOverviewScreen({route}){
+const catId = route.params.categoryId;
+
+return (
+	<View style={styles.container}>
+		<Text>Meals Overview Screen- {catId}</Text>
+	</View>
+);
+}

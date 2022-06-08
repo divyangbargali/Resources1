@@ -1,0 +1,7 @@
+
+//Image tag
+
+<View>
+<Text>Hello React Native</Text>
+<Image source={require('./assets/images/rating-1.png')} />
+</View>

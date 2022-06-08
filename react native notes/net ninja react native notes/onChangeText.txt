@@ -1,0 +1,14 @@
+
+//onChangeText
+
+const [name, setName] = useState('shaun');
+
+return (
+	<View style={styles.container}>
+		<TextInput multiline kyeboardType='numeric' style={style.input} placeholder='e.g. John Doe' 
+onChangeText={(val) => setName(val)} />
+
+	<Text>name: {name}, age:{age} </Text>
+
+	</View>
+

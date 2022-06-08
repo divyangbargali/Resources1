@@ -1,0 +1,57 @@
+
+// inline css in bootstrap and material UI
+
+
+ const useStyles = makeStyles((theme) => ({
+        roots: {
+            "& .MuiBackdrop-root": {
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+            },
+    
+            // "& .MuiOutlinedInput-root": {
+            //   position: "relative",
+            //   width: "100%",
+            //   paddingRight: "0 !important",
+            // },
+        },
+        LogIn: {
+            fontSize: theme.typography.pxToRem(16),
+            color: "#fff",
+            fontFamily: `'Montserrat', 'sans-serif'`,
+            fontWeight: "normal",
+            textTransform: "initial",
+        },
+        Header: {
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "43px",
+    
+            "& h3": {
+                fontSize: theme.typography.pxToRem(24),
+                color: "#16284D",
+                fontFamily: `'Montserrat', 'sans-serif'`,
+    
+                fontWeight: "bold",
+            },
+        },
+ inputBoxDesign:{
+           display:'inline',
+           padding:'20px',
+           marginRight:'16px',
+           backgroundColor: '#F5F5F5', 
+           border: '1px solid #F5F5F5', 
+           outline: 'none', 
+           height: '44px', 
+           width: '30px',
+        },
+        emailInput:{
+            width: '350px',
+            margin:'0',
+            padding:'0',
+        }
+    }));
+
+ const classes = useStyles();
+
+ <input type="text" id="fname" name="fname" className={classes.inputBoxDesign} />

@@ -1,0 +1,12 @@
+
+
+// Image in background.
+
+
+<View style={styles.container}>
+           
+           <ImageBackground style={styles.imgSize} source={require('./assets/images/rating-1.png')} >
+            <Text style={styles.textColor}>Hello React Native</Text>
+           </ImageBackground>
+         </View>
+ );

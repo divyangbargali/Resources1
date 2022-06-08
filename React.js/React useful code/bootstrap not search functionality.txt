@@ -1,0 +1,43 @@
+
+///bootstrap not search functionality.
+
+
+<script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+
+    $("#myDIV,#panel1a-header").filter(function() {
+      console.log($("#myDIV").attr("style"))
+        if ($("#myDIV").attr("style")!== undefined && $("#myDIV").attr("style") ==="display: none;"){
+          $("#myDIV2").attr("style","display:block")
+        }
+        else{
+          $("#myDIV2").attr("style","display:none")
+        }
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      
+        // var val1 = $("#panel1a-header.accordian-title").length;
+        //  console.log(val1);
+    
+    });
+  });
+  </script>
+
+
+
+        <div id="myDIV" class="mt-3">
+
+	 </div>
+        <div id="myDIV2" class="mt-3 SearchStyling" style={{display:'none'}}>
+        <Container maxWidth="xl">
+
+         <h2>Your search can’t be found</h2>
+         <p>Please make sure your keyword is correct or try another keywords</p>
+        </Container>
+        </div>
+
+
+
+

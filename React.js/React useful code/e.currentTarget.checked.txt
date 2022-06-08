@@ -1,0 +1,5 @@
+
+
+// e.currentTarget.checked
+
+ <input type="checkbox" value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)}/>

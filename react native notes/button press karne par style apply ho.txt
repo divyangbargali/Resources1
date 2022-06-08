@@ -1,0 +1,7 @@
+// button press karne par style apply ho 
+
+
+<Pressable android_ripple={{color:'#ccc'}} style={({pressed}) => [
+styles.button, pressed ? styles.buttonPressed : null,]} >
+
+</Pressable>

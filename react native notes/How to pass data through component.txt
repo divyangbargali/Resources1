@@ -1,0 +1,40 @@
+
+// How to pass data through component.
+
+import React from 'react';
+import {View, Text} from 'react-native';
+import Home from './component/Home';
+
+const Home =() => {
+	const Data = "some data";
+
+	return (
+		<View>
+			<Home data={Data} />
+		</View>
+
+);
+};
+
+export default Home;
+
+
+--- Home Component------
+
+import React from 'react';
+import {View, Text,} from 'react-native';
+
+const Home = (props) => {
+ 	console.log(props)
+	return (
+		<View>
+			<Text style={{fontSize:60}}>
+				Home Component
+			{props.data}
+			</Text>
+		</View>
+
+);
+};
+
+export default Home;

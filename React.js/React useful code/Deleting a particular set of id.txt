@@ -1,0 +1,15 @@
+
+// Deleting a particular set of id
+
+const deleteTask = (id) => {
+	setTasks(tasks.filter(() => tasks.id !== id))
+}
+
+return (
+	<div className="container">
+	<Header />
+	<Tasks tasks={tasks} onDelete={deleteTask} />
+	</div>
+);
+}
+

@@ -1,0 +1,21 @@
+
+// Alert
+
+import React from 'react';
+import { render } from 'react-dom';
+import { View, Text, Modal, Button, Alert} from 'react-native';
+
+export default function App() {
+  var app =1;
+  if(app > 0){
+    Alert.alert('OOPS!','Todos must be over 3 chars long');
+      }
+
+  return (
+
+  <View>
+      <Text>Hello World!</Text>
+   </View>
+
+  );
+}

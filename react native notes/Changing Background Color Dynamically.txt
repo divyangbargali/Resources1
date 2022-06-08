@@ -1,0 +1,9 @@
+
+// Changing Background Color Dynamically
+
+
+<View style={[styles.gridItem,{backgroundColor:color}]}>
+
+
+
+</View>

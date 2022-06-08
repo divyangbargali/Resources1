@@ -1,0 +1,5 @@
+
+// multiple styles tag main dena
+
+<View style={[styles.gridItem,{ backgroundColor:color}]}>
+</View>

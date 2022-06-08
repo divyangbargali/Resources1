@@ -1,0 +1,107 @@
+
+// filter function in javascript
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The filter() Method</h2>
+
+<p>Get every element in the array that has a value of 18 or more:</p>
+
+<p id="demo"></p>
+
+<script>
+const ages = [32, 33, 16, 40];
+
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+</script>
+
+</body>
+</html>
+
+Output:
+Get every element in the array that has a value of 18 or more:
+
+32,33,40
+--------------------------------
+
+//Position of method.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The indexOf() Method</h2>
+
+<p>indexOf() returns the position of the first occurrence of a value in a string.</p>
+
+<p>Find "welcome":</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Hello world, welcome to the universe.";
+let result = text.indexOf("welcome");
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>
+
+Output:
+
+indexOf() returns the position of the first occurrence of a value in a string.
+
+Find "welcome":
+
+13
+
+--------------------------------------------
+
+// Spread Operator- 1.
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+document.write(numbersCombined);
+</script>
+
+</body>
+</html>
+
+OUtput: 1,2,3,4,5,6
+
+-------------------------------------------
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne];
+
+document.write(numbersCombined);
+</script>
+
+</body>
+</html>
+
+Output: 1,2,3
+-------------------------------------

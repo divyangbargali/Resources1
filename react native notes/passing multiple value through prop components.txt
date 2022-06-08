@@ -1,0 +1,4 @@
+// passing multiple value through prop components.
+
+
+<ChildComponentName value1={this.state.value1} value2={this.state.value2}/>

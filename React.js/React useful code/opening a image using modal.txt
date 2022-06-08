@@ -1,0 +1,59 @@
+
+// opening a image using modal.
+
+import ModalImage from './ModalImage';
+import { useState } from "react";
+import React from "react";
+import Images from "../component/Images/Images";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Box, Button, Container, Grid } from "@mui/material";
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 600,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
+export default function LearnMore() {
+
+  const [ImageNumber, setImageNumber] = useState('');
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const handleCardClick = (img) => {
+    handleOpen()
+    console.log('this is image', img)
+    setImageNumber(img)
+  }
+
+
+ return (
+
+ <Card className="learnmore-cardimages">
+
+                  {/* <Button onClick={handleCardClick}/> */}
+                  {/* {console.log('hell',ImageNumber)} */}
+
+                  <Button onClick={() => handleCardClick(card_data_item.img)}>
+                    <CardMedia
+                      component="img"
+                      image={card_data_item.img}
+                      alt="green iguana"
+                    />
+                  </Button>
+                  {open && <ModalImage modal_img={ImageNumber} open={open} handleClose={handleClose} />}
+
+                </Card>
+ );
+
+}

@@ -1,0 +1,23 @@
+
+// keyboard dismiss code.
+
+
+import { View, Text, Modal, Button, Alert, TextInput,StyleSheet, TouchableWithoutFeedback} from 'react-native';
+
+
+export default function App() {
+
+    return (
+<TouchableWithoutFeedback onPress={() => {
+      Keyboard.dismiss();
+      console.log('dismissed keyboard');
+    }}>
+     <View style={styles.container}>
+         <TextInput style={styles.inputArea} placeholder="Enter Your Name!"   placeholderTextColor="red"/>
+      <Text>Hello World!</Text>
+      <Button title="Click On Me"/>
+     </View>
+     </TouchableWithoutFeedback>
+
+
+    });

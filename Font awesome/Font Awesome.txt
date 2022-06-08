@@ -1,0 +1,19 @@
+
+
+// Font awesome.
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+
+	<FontAwesomeIcon icon={faCoffee} />
+
+https://fontawesome.com/v4/icon/bars
+
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>

@@ -1,0 +1,60 @@
+
+
+
+//Modal 
+
+import React,{useState} from 'react';
+import { View,  Text, StyleSheet,ImageBackground, Button, Modal} from 'react-native';
+
+
+import { SafeAreaView } from 'react-navigation';
+
+
+const App = () => {
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+return (
+ 
+        <View style={styles.container}>
+           
+           <Modal visible={modalOpen} animationType='slide'>
+              <View style={{marginTop:80}}>
+              <Button title ="Hide Modal" onPress={() => setModalOpen(false)} />
+              </View>
+           </Modal>
+        
+        <Button title="Show Modal" onPress={() => setModalOpen(true)} />
+        </View>
+);
+}
+
+
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    alignItems: 'center',
+   justifyContent:'center',
+
+   
+  },
+  imgSize:{
+   height:300,
+    width:300,
+    borderWidth:3,
+    borderColor:'white',
+  },
+  textColor:{
+    flexDirection:'row',
+    height:30,
+    color:'white',
+   
+   justifyContent:'center',
+   alignItems:'flex-start',
+   borderWidth:2,
+   borderColor:'red',
+  }
+});
+
+export default App;

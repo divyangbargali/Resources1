@@ -1,0 +1,5 @@
+
+// ternary operator condition in a component.
+
+
+ {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 'No Tasks To Show' }

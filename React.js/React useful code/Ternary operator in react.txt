@@ -1,0 +1,23 @@
+
+
+// Ternary operator in react.js
+
+
+function App(){
+const name = 'Brad'
+const x = true
+
+return (
+<div className='container'>
+
+
+<h1>Hello </h1>
+
+<h2> Hello {x ? 'Yes' :'no'} </h2>
+
+</div>
+
+)
+}
+
+export default App

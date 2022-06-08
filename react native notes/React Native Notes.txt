@@ -1,0 +1,340 @@
+// App.js
+
+import React from 'react';
+import { View, Text, StyleSheet} from 'react-native';
+import Login from './components/Login';
+
+const App = () => {
+  return (
+    <View>
+      <Text>Hello React Native</Text>
+      <Login/>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+  },
+ 
+});
+
+export default App;
+------------------------------------------------------------
+//Login.js { Login Component}
+import React from 'react';
+import {View, Text, } from 'react-native';
+
+const Login = () => {
+    return (
+        <View>
+            <Text>Login Screen is here</Text>
+        </View>
+    );
+}
+
+
+export default Login;
+
+-----------------------------------------------------------------------
+
+// inline css in react native.
+
+<View>
+      <Text style={{fontSize:70}}>Hello React Native</Text>
+     
+    </View>
+
+-----------------------------------------------------
+
+// Functional Component
+
+
+const App = () => {
+  return (
+    <View>
+      <Text style={{fontSize:70}}>Hello React Native</Text>
+     
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+  },
+ 
+});
+
+export default App;
+
+-----------------------------------------------------
+
+//Button 
+
+<Button title="Login" onPress={() => {alert('Hi, class Component')}} />
+
+---------------------------------------------------
+
+// Calling a function through Button.
+
+  function login(){
+    alert('login function');
+  }
+
+ <Button title="Login" onPress={login} />
+
+ -----------------------------------------------
+
+ // Class Component 
+
+ import React,{Component} from 'react';
+import { View, Text, Button} from 'react-native';
+import Login from './components/Login';
+
+class App extends Component {
+
+    render()
+    {
+      return (
+        <View>
+          <Text style={{fontSize:60}}>Class Component</Text>
+          <Button onPress={() => alert('Hello Class Cmp')} title="Press On" />
+        </View>
+      );
+    }
+}
+
+export default App;
+
+-------------------------------------------------
+
+// How to pass props form App.js component to other component.
+
+import React,{Component} from 'react';
+import { View, Text, Button} from 'react-native';
+import Login from './components/Login';
+import Home from './components/Home';
+
+const App = () => {
+
+      const Data = "some data";
+
+      return (
+        <View>
+          <Text style={{fontSize:60}}>Class Component</Text>
+          <Button onPress={() => alert('Hello Class Cmp')} title="Press On" />
+          <Home data={Data}/>
+        </View>
+      );
+  
+}
+
+export default App;
+
+/ Home Component.
+import React from 'react';
+import {View,Text,Button} from 'react-native';
+
+const Home = (props) => {
+    console.log(props);
+    return (
+        <View>
+            <Text style={{fontSize:90}}>
+               Home Component
+             <Text style={{fontSize:30, color:'red'}}>{props.data}</Text>  
+            </Text>
+            <Button title="Press me"/>
+        </View>
+    );
+
+};
+
+export default Home;
+
+---------------------------------------------------
+
+// Applying Multiple StyleSheet to a Text.
+
+
+return(
+      <View>
+         <Text style={[styles.red,styles.fonts]}>
+           Just red
+         </Text>
+      </View>
+    );
+  }
+}
+
+const styles=StyleSheet.create({
+  red:{
+    fontSize:30,
+    color:'red',
+    backgroundColor:'green',
+    fontWeight:'bold'
+  },
+  fonts:{
+    fontSize:30,
+    fontWeight:'bold',
+  }
+})
+
+export default App;
+
+--------------------------------------------------------
+
+/ Creating State With Constructor.
+
+constructor()
+  {
+    super();
+
+    this.state={
+      name:'',
+      password:'',
+      address:'',
+    }
+  }
+
+  render(){
+
+    return(
+      <View>
+         <TextInput placeholder="Enter name" onChangeText={(text) => {
+            this.setState({name:text})
+         }}>
+
+         </TextInput>
+        
+      </View>
+    );
+  }
+
+  ---------------------------------------------------
+
+  / Scroll View
+
+  import React from 'react';
+import{
+  View, Text, ScrollView
+} from 'react-native';
+
+class App extends React.Component{
+  render(){
+    return (
+
+      <View style={{flex:1}}>
+        
+          <Text style={{fontSize:150}}>Scroll View</Text>
+        <ScrollView horizontal={false} style={{width:200}}>
+          <View style={{height:200,width:200,backgroundColor:'green'}}></View>
+          <View style={{height:200,width:200,backgroundColor:'skyblue'}}></View>
+          <View style={{height:200,width:200,backgroundColor:'black'}}></View>
+          <View style={{height:200,width:200,backgroundColor:'orange'}}></View>
+          <View style={{height:200,width:200,backgroundColor:'blue'}}></View>
+          <View style={{height:200,width:200,backgroundColor:'red'}}></View>
+        </ScrollView>
+      </View>
+    )
+  }
+}
+
+export default App;
+
+------------------------------------------------------
+
+// onPress Function Functionality
+
+import React,{useState} from 'react';
+import{
+  View, Text, Button
+} from 'react-native';
+
+function App(){
+ 
+  const [count,setCount] = useState(0); 
+    return (
+
+      <View style={{flex:1}}>
+          <View style={{marginTop:30}}>
+           <Button title="Plus" onPress={()=>setCount(count-1)}/>
+           </View>
+          <Text style={{fontSize:150}}>{count}</Text>
+          <Button title="Minus" onPress={()=>setCount(count+1)}/>
+      </View>
+    )
+
+}
+
+export default App;
+
+-----------------------------------------------
+
+// State in react native.
+
+import React,{useState} from 'react';
+
+const [count,setCount] = useState(0);
+
+ <Button title="Plus" onPress={()=>setCount(count-1)}/>
+
+ ---------------------------------------------------
+
+
+ 
+ // looping throug map in react native.
+  courseGoals is a state ( aur you can say object)
+
+    <View style={styles.goalsContainer}>
+          {courseGoals.map((goal) => <Text>{goal}</Text>) }
+      </View>
+
+-------------------------------------------------------
+
+ <Image style={styles.image} source={require('../assets/images/goal.png')} />
+
+ --------------------------------------------------------
+
+ // Modal Show and Hide.
+
+
+ import React from 'react';
+import { render } from 'react-dom';
+import { View, Text, Modal, Button} from 'react-native';
+
+class App extends React.Component {
+
+  constructor(){
+    super();
+    this.state={
+      show:false
+    }
+  }
+
+  render() {
+    return (
+      <View style={{flex:1, marginTop:100}}>
+        <Text style={{fontSize:40, marginTop:60}}>Normal Text</Text>
+
+        <Button onPress={() => {this.setState({show:true})}} title="Show Modal"/>
+
+        <Modal visible={this.state.show}>
+          <View style={{width:'100%', height:'30%',backgroundColor:'#000000aa',flex:1}}>
+            <View style={{margin:50,backgroundColor:'#ffffff',flex:1, borderRadius:8,padding:40}}>
+              <Text style={{fontSize:40}}>Modal</Text>
+
+              <Button onPress={() => {this.setState({show:false})}} title="Hide Modal"/>
+            </View>
+           </View>
+        </Modal>
+ 
+      </View>
+    )
+  }
+}
+
+export default App;
+
+-------------------------------------------------------------------
