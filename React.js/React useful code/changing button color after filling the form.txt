@@ -1,0 +1,56 @@
+
+
+
+
+function isEmpty(){
+
+		let username = document.getElementById("username").value;
+		let password = document.getElementById("email").value;
+		let inquiry = document.getElementById("inquiry").value;
+
+		if(username != "" && password != "" && inquiry != ""){
+		document.getElementById("btn").classList.add("enquryFieldButtonColor")
+}if(username == "" && password == "" && inquiry == ""){
+  document.getElementById("btn").classList.remove("enquryFieldButtonColor")
+}
+}
+
+
+
+ <form method="post" id="sheetdb-form"
+                action="https://sheetdb.io/api/v1/jpr3ideyu3uwx">
+
+                <FormControl variant="standard">
+                  <BootstrapInput
+                    defaultValue=""
+                    id="username"
+                    name="data[Name]"
+                    placeholder="Enter your name"
+                    onKeyUp={() => {isEmpty()}}
+                  />
+
+                  <BootstrapInput
+                    defaultValue=""
+                    id="email"
+                    name="data[Email]"
+                    placeholder="Enter your email address"
+                    onKeyUp={() => {isEmpty()}}
+                  />
+
+                  <BootstrapInput
+                    type="input"
+                    name="data[Inquiry]"
+                    id="inquiry"
+                    placeholder="Write your inquiries"
+                    size="larger"
+                    className="enquiryField"
+                    multiline="true"
+                    minRows="6"
+                    onKeyUp={() => {isEmpty()}}
+                  />
+                </FormControl>
+
+                <Button type="submit" id="btn" className="enquryFieldButton" onClick={mailSend}>
+                  Submit
+                </Button>
+              </form>
