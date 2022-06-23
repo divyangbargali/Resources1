@@ -1,0 +1,19 @@
+"@media screen and (max-width: 600px)": {
+
+      "customCollections": {
+        
+        textAlign: 'center !important',
+        backgroundColor: 'black !important',
+      },
+
+      "item": {
+        // width: "620px",
+        width: '300px !important',
+        background: 'yellow !important',
+        textAlign: 'center !important',
+        margin: 'auto !important',
+        marginTop: '10px !important',
+      },
+
+
+    }
